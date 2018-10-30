@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		027058B375D697C6371A193A89D9D4A9 /* ZLYGlobalTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AACD30A1627A470D3857DD51C764DD /* ZLYGlobalTimer-dummy.m */; };
+		0452C1342F9124A7FE544A876D8354D5 /* ZLYGlobalTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 945DD8915BAC9FB2BD638D8D6F8BDB71 /* ZLYGlobalTimer.m */; };
+		0494703F435A379D8600388591BE470E /* Pods-ZLYGlobalTimer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A60A01B35ABC8A1A659F2C0E8EA58B48 /* Pods-ZLYGlobalTimer_Tests-dummy.m */; };
+		05F28B83B88C165BDC5F9FA26D1725E2 /* NSTimer+ZLYGTExpansion.h in Headers */ = {isa = PBXBuildFile; fileRef = 75AD0ED1AB8CE3631F9539BF5102737D /* NSTimer+ZLYGTExpansion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0668BA6D754AD73D9DD99C98DD9F0390 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */; };
+		3E46AF4A42DB9FCA4087DBFFF4831361 /* ZLYGlobalTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CDC7A2BD7CAB309EEC97CF96080ADF /* ZLYGlobalTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		501B5FB7B93D1410A71E5C26B302A55E /* MSWeakTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CFB87567BAE6F73902631D35C924DAD /* Pods-ZLYGlobalTimer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 14251901116F0F588A10332C28DEE54B /* Pods-ZLYGlobalTimer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		767AD2DBF7C16348215F69C1FA5C50C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */; };
+		823641DF7FF13AE4709C3AB5698AAA95 /* MSWeakTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */; };
+		93F9F6FDE3ED34730694C1A29299367C /* ZLYGlobalTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 973218B06B1B2780E5519EAE0D7CF5C2 /* ZLYGlobalTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9424FCD7853D306E60B80A61EAC6CF80 /* Pods-ZLYGlobalTimer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F8B9A11487E437A0C0BA51111E559A8 /* Pods-ZLYGlobalTimer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F7468722DD717A5D3BBFC850F957966 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */; };
+		A2B14F3512914A966C4D2CD5A3734CE6 /* Pods-ZLYGlobalTimer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A3E11DCFC5088C74F2C12F6793D194 /* Pods-ZLYGlobalTimer_Example-dummy.m */; };
+		A9EFB63E026D5647795587A1A43BF7F8 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AFFEC4D509ED0950FF431626FA1DE9BC /* MSWeakTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7F2B95EC6427556736AA5638EBFBA59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */; };
+		BFA31045DBC81F21247BF061DFAED13C /* NSTimer+ZLYGTExpansion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2A82041F274C571913D89A7B03ABCC /* NSTimer+ZLYGTExpansion.m */; };
+		D8F3300D5074CDDC475E7D136B417279 /* MSWeakTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEF5104A91FA0EE98FA067190E4A273 /* MSWeakTimer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49D64B7D4F03DF4D406129AFCC560DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D6AA575A5A1328718F3E4F32A7D4163;
+			remoteInfo = "Pods-ZLYGlobalTimer_Example";
+		};
+		4FD53F5E8814C42F14E92B1623E0E8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6E2C489C87B3328DF55E84521F17AD;
+			remoteInfo = MSWeakTimer;
+		};
+		B8D8FADC82671880C2D1E7E381B13194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA6E2C489C87B3328DF55E84521F17AD;
+			remoteInfo = MSWeakTimer;
+		};
+		CEDBD9CA8DAAA1921780B356041B6E94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88166592969712188C0F5317D1FF1C94;
+			remoteInfo = ZLYGlobalTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040BB6FD635F6BB051684AE4F17B6AE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		14251901116F0F588A10332C28DEE54B /* Pods-ZLYGlobalTimer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZLYGlobalTimer_Example-umbrella.h"; sourceTree = "<group>"; };
+		14CD5C5B5CC7AB1BBC7A2C997C1AA891 /* Pods-ZLYGlobalTimer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZLYGlobalTimer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		1C659087BC7F39A48DA4643151907947 /* Pods-ZLYGlobalTimer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZLYGlobalTimer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1FACA1E5119833DC1481596E942E34DF /* ZLYGlobalTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZLYGlobalTimer.modulemap; sourceTree = "<group>"; };
+		20C8390876D0FBAEC40533E968DA4C64 /* Pods_ZLYGlobalTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZLYGlobalTimer_Example.framework; path = "Pods-ZLYGlobalTimer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2A82041F274C571913D89A7B03ABCC /* NSTimer+ZLYGTExpansion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+ZLYGTExpansion.m"; path = "ZLYGlobalTimer/Classes/NSTimer+ZLYGTExpansion.m"; sourceTree = "<group>"; };
+		34CC293DB84D8D47C7FBB3A3E4BB5536 /* Pods-ZLYGlobalTimer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZLYGlobalTimer_Example-frameworks.sh"; sourceTree = "<group>"; };
+		37B4DCC9932D99B809B4B9B7E1F4C03E /* MSWeakTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSWeakTimer.framework; path = MSWeakTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MSWeakTimer-dummy.m"; sourceTree = "<group>"; };
+		41D400AEDE6A07ED1807EB4EAFB059CD /* ZLYGlobalTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLYGlobalTimer-prefix.pch"; sourceTree = "<group>"; };
+		47CF7741FEEB633466F7D4E28A830281 /* Pods-ZLYGlobalTimer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZLYGlobalTimer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		488EF6CEAB188651BC821A251A10F520 /* Pods-ZLYGlobalTimer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZLYGlobalTimer_Tests-resources.sh"; sourceTree = "<group>"; };
+		4FEF5104A91FA0EE98FA067190E4A273 /* MSWeakTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSWeakTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA1C58D007BEC87C1ED8DD13B769B66 /* Pods-ZLYGlobalTimer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZLYGlobalTimer_Example.modulemap"; sourceTree = "<group>"; };
+		660562CA0C905A090B8F75EC7F935ED9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A23E3A8B3B482B44A77DA3444C7CD31 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B5BD20159117723815C77E1D89AA343 /* Pods-ZLYGlobalTimer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZLYGlobalTimer_Example-resources.sh"; sourceTree = "<group>"; };
+		6D783C5A92E224263A4FD4715E3B6FA2 /* Pods-ZLYGlobalTimer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLYGlobalTimer_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7120426630112A97383ED5B9FA95AB16 /* ZLYGlobalTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZLYGlobalTimer.xcconfig; sourceTree = "<group>"; };
+		75AD0ED1AB8CE3631F9539BF5102737D /* NSTimer+ZLYGTExpansion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+ZLYGTExpansion.h"; path = "ZLYGlobalTimer/Classes/NSTimer+ZLYGTExpansion.h"; sourceTree = "<group>"; };
+		78A3E11DCFC5088C74F2C12F6793D194 /* Pods-ZLYGlobalTimer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZLYGlobalTimer_Example-dummy.m"; sourceTree = "<group>"; };
+		7D5174A7D6904F9A6EC8065943604EF0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7F14DD57E269A9BEFFA6C69AB88F14CB /* Pods-ZLYGlobalTimer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZLYGlobalTimer_Tests.modulemap"; sourceTree = "<group>"; };
+		84E09609FCF132F94BE6F7937929A727 /* Pods-ZLYGlobalTimer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLYGlobalTimer_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		908F837CB0CB4F291DB17EE9050EF9F5 /* Pods-ZLYGlobalTimer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZLYGlobalTimer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		91B1E836DC4F86C6F383B89605D475D6 /* Pods-ZLYGlobalTimer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLYGlobalTimer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9202CD841070928F6FFA71EFA362FB56 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93AACD30A1627A470D3857DD51C764DD /* ZLYGlobalTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZLYGlobalTimer-dummy.m"; sourceTree = "<group>"; };
+		945DD8915BAC9FB2BD638D8D6F8BDB71 /* ZLYGlobalTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZLYGlobalTimer.m; path = ZLYGlobalTimer/Classes/ZLYGlobalTimer.m; sourceTree = "<group>"; };
+		973218B06B1B2780E5519EAE0D7CF5C2 /* ZLYGlobalTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZLYGlobalTimer-umbrella.h"; sourceTree = "<group>"; };
+		9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		9F8B9A11487E437A0C0BA51111E559A8 /* Pods-ZLYGlobalTimer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZLYGlobalTimer_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A60A01B35ABC8A1A659F2C0E8EA58B48 /* Pods-ZLYGlobalTimer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZLYGlobalTimer_Tests-dummy.m"; sourceTree = "<group>"; };
+		AC5E8C9FB02F6EA795FA5A6EC800730F /* MSWeakTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MSWeakTimer.modulemap; sourceTree = "<group>"; };
+		AF9BFC239F9D1C015D7F5632316B2E95 /* Pods-ZLYGlobalTimer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZLYGlobalTimer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MSWeakTimer.xcconfig; sourceTree = "<group>"; };
+		BBD13D228DCC637B5141009542F0A15D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED283FDED8722B87BB98B0C62DD4845 /* ZLYGlobalTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZLYGlobalTimer.framework; path = ZLYGlobalTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CDC7A2BD7CAB309EEC97CF96080ADF /* ZLYGlobalTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZLYGlobalTimer.h; path = ZLYGlobalTimer/Classes/ZLYGlobalTimer.h; sourceTree = "<group>"; };
+		C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSWeakTimer-umbrella.h"; sourceTree = "<group>"; };
+		CBF67C18F858C29A1D0000FADDFA975E /* MSWeakTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSWeakTimer-prefix.pch"; sourceTree = "<group>"; };
+		CDDD49FBA4A61100CCE8060851F2682E /* Pods-ZLYGlobalTimer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZLYGlobalTimer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
+		DF6EDF6D9BBAD799C7D18E2F30316094 /* ZLYGlobalTimer.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZLYGlobalTimer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E3068BDB1052962B1005DCFA27DD48D8 /* Pods_ZLYGlobalTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZLYGlobalTimer_Tests.framework; path = "Pods-ZLYGlobalTimer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D6A686A9025B7256B9D18FA27B0807B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0668BA6D754AD73D9DD99C98DD9F0390 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A866390A7A90E19461F238B11FB27D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7468722DD717A5D3BBFC850F957966 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D56ACC0110B1FA639E0EA317BA86FC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7F2B95EC6427556736AA5638EBFBA59 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F08B178890D4454D969998113A2372B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767AD2DBF7C16348215F69C1FA5C50C6 /* Foundation.framework in Frameworks */,
+				D8F3300D5074CDDC475E7D136B417279 /* MSWeakTimer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B2C15587302DC434CB065F65E33B83E /* Pods-ZLYGlobalTimer_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9202CD841070928F6FFA71EFA362FB56 /* Info.plist */,
+				5CA1C58D007BEC87C1ED8DD13B769B66 /* Pods-ZLYGlobalTimer_Example.modulemap */,
+				1C659087BC7F39A48DA4643151907947 /* Pods-ZLYGlobalTimer_Example-acknowledgements.markdown */,
+				CDDD49FBA4A61100CCE8060851F2682E /* Pods-ZLYGlobalTimer_Example-acknowledgements.plist */,
+				78A3E11DCFC5088C74F2C12F6793D194 /* Pods-ZLYGlobalTimer_Example-dummy.m */,
+				34CC293DB84D8D47C7FBB3A3E4BB5536 /* Pods-ZLYGlobalTimer_Example-frameworks.sh */,
+				6B5BD20159117723815C77E1D89AA343 /* Pods-ZLYGlobalTimer_Example-resources.sh */,
+				14251901116F0F588A10332C28DEE54B /* Pods-ZLYGlobalTimer_Example-umbrella.h */,
+				84E09609FCF132F94BE6F7937929A727 /* Pods-ZLYGlobalTimer_Example.debug.xcconfig */,
+				91B1E836DC4F86C6F383B89605D475D6 /* Pods-ZLYGlobalTimer_Example.release.xcconfig */,
+			);
+			name = "Pods-ZLYGlobalTimer_Example";
+			path = "Target Support Files/Pods-ZLYGlobalTimer_Example";
+			sourceTree = "<group>";
+		};
+		2287C7EEFDC274C075292A4A8189A7DD /* Pods-ZLYGlobalTimer_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BBD13D228DCC637B5141009542F0A15D /* Info.plist */,
+				7F14DD57E269A9BEFFA6C69AB88F14CB /* Pods-ZLYGlobalTimer_Tests.modulemap */,
+				47CF7741FEEB633466F7D4E28A830281 /* Pods-ZLYGlobalTimer_Tests-acknowledgements.markdown */,
+				908F837CB0CB4F291DB17EE9050EF9F5 /* Pods-ZLYGlobalTimer_Tests-acknowledgements.plist */,
+				A60A01B35ABC8A1A659F2C0E8EA58B48 /* Pods-ZLYGlobalTimer_Tests-dummy.m */,
+				14CD5C5B5CC7AB1BBC7A2C997C1AA891 /* Pods-ZLYGlobalTimer_Tests-frameworks.sh */,
+				488EF6CEAB188651BC821A251A10F520 /* Pods-ZLYGlobalTimer_Tests-resources.sh */,
+				9F8B9A11487E437A0C0BA51111E559A8 /* Pods-ZLYGlobalTimer_Tests-umbrella.h */,
+				AF9BFC239F9D1C015D7F5632316B2E95 /* Pods-ZLYGlobalTimer_Tests.debug.xcconfig */,
+				6D783C5A92E224263A4FD4715E3B6FA2 /* Pods-ZLYGlobalTimer_Tests.release.xcconfig */,
+			);
+			name = "Pods-ZLYGlobalTimer_Tests";
+			path = "Target Support Files/Pods-ZLYGlobalTimer_Tests";
+			sourceTree = "<group>";
+		};
+		4E94505D83A33941056546F3AC99BADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37B4DCC9932D99B809B4B9B7E1F4C03E /* MSWeakTimer.framework */,
+				20C8390876D0FBAEC40533E968DA4C64 /* Pods_ZLYGlobalTimer_Example.framework */,
+				E3068BDB1052962B1005DCFA27DD48D8 /* Pods_ZLYGlobalTimer_Tests.framework */,
+				BED283FDED8722B87BB98B0C62DD4845 /* ZLYGlobalTimer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52FE70CE1584DAE934FAC85CD4EEC063 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FA23681CBC0250220EA1242F26E053A4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6068CCA9F9B7A528531715C330BCB373 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F729AA329A2853EC4EBF570EBF26D9E6 /* MSWeakTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6504FF0742CB82EB4074A859DA6DE185 /* ZLYGlobalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				75AD0ED1AB8CE3631F9539BF5102737D /* NSTimer+ZLYGTExpansion.h */,
+				2E2A82041F274C571913D89A7B03ABCC /* NSTimer+ZLYGTExpansion.m */,
+				C1CDC7A2BD7CAB309EEC97CF96080ADF /* ZLYGlobalTimer.h */,
+				945DD8915BAC9FB2BD638D8D6F8BDB71 /* ZLYGlobalTimer.m */,
+				6753B09ABAFA4E1AD3E27E8B6163BE42 /* Pod */,
+				E399F0BCFD0EC9EEF0D9297ED666908C /* Support Files */,
+			);
+			name = ZLYGlobalTimer;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		6753B09ABAFA4E1AD3E27E8B6163BE42 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				040BB6FD635F6BB051684AE4F17B6AE0 /* LICENSE */,
+				7D5174A7D6904F9A6EC8065943604EF0 /* README.md */,
+				DF6EDF6D9BBAD799C7D18E2F30316094 /* ZLYGlobalTimer.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				EE79E277F8B678F14606B45D6E0AF179 /* Development Pods */,
+				F5181A7907C7D8D4163697F12FAF5AFF /* Frameworks */,
+				6068CCA9F9B7A528531715C330BCB373 /* Pods */,
+				4E94505D83A33941056546F3AC99BADB /* Products */,
+				BDF320BDD7634613358E1D2DFDA2FAFD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BDF320BDD7634613358E1D2DFDA2FAFD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B2C15587302DC434CB065F65E33B83E /* Pods-ZLYGlobalTimer_Example */,
+				2287C7EEFDC274C075292A4A8189A7DD /* Pods-ZLYGlobalTimer_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E399F0BCFD0EC9EEF0D9297ED666908C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A23E3A8B3B482B44A77DA3444C7CD31 /* Info.plist */,
+				1FACA1E5119833DC1481596E942E34DF /* ZLYGlobalTimer.modulemap */,
+				7120426630112A97383ED5B9FA95AB16 /* ZLYGlobalTimer.xcconfig */,
+				93AACD30A1627A470D3857DD51C764DD /* ZLYGlobalTimer-dummy.m */,
+				41D400AEDE6A07ED1807EB4EAFB059CD /* ZLYGlobalTimer-prefix.pch */,
+				973218B06B1B2780E5519EAE0D7CF5C2 /* ZLYGlobalTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ZLYGlobalTimer";
+			sourceTree = "<group>";
+		};
+		E54BBBA4F86B53BAC97715858840345A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				660562CA0C905A090B8F75EC7F935ED9 /* Info.plist */,
+				AC5E8C9FB02F6EA795FA5A6EC800730F /* MSWeakTimer.modulemap */,
+				B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */,
+				3D5031936D76DE17D62EDAE85DE9E413 /* MSWeakTimer-dummy.m */,
+				CBF67C18F858C29A1D0000FADDFA975E /* MSWeakTimer-prefix.pch */,
+				C6150F5A144638714BA91A0FECB4D14A /* MSWeakTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MSWeakTimer";
+			sourceTree = "<group>";
+		};
+		EE79E277F8B678F14606B45D6E0AF179 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6504FF0742CB82EB4074A859DA6DE185 /* ZLYGlobalTimer */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F5181A7907C7D8D4163697F12FAF5AFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FEF5104A91FA0EE98FA067190E4A273 /* MSWeakTimer.framework */,
+				52FE70CE1584DAE934FAC85CD4EEC063 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F729AA329A2853EC4EBF570EBF26D9E6 /* MSWeakTimer */ = {
+			isa = PBXGroup;
+			children = (
+				9F75927904D7F696FC819B3F54DB16C9 /* MSWeakTimer.h */,
+				DECD003FADBAF3544E297DB7ED31B600 /* MSWeakTimer.m */,
+				E54BBBA4F86B53BAC97715858840345A /* Support Files */,
+			);
+			name = MSWeakTimer;
+			path = MSWeakTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1A6895B8762E4D08B04D37D6B3CA9F2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F28B83B88C165BDC5F9FA26D1725E2 /* NSTimer+ZLYGTExpansion.h in Headers */,
+				93F9F6FDE3ED34730694C1A29299367C /* ZLYGlobalTimer-umbrella.h in Headers */,
+				3E46AF4A42DB9FCA4087DBFFF4831361 /* ZLYGlobalTimer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D18BFE64E160AE360B5D1887584D6C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CFB87567BAE6F73902631D35C924DAD /* Pods-ZLYGlobalTimer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68654C6078B0AC01AC99EBE8498CA1A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501B5FB7B93D1410A71E5C26B302A55E /* MSWeakTimer-umbrella.h in Headers */,
+				AFFEC4D509ED0950FF431626FA1DE9BC /* MSWeakTimer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEDC32E2FB1D057595E8AB593D624C41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9424FCD7853D306E60B80A61EAC6CF80 /* Pods-ZLYGlobalTimer_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D6AA575A5A1328718F3E4F32A7D4163 /* Pods-ZLYGlobalTimer_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7773F9DAB241B3AF9C27E8431E31C282 /* Build configuration list for PBXNativeTarget "Pods-ZLYGlobalTimer_Example" */;
+			buildPhases = (
+				18A199B5F41A5B3D6ACA1B685CCDC2DB /* Sources */,
+				7D56ACC0110B1FA639E0EA317BA86FC0 /* Frameworks */,
+				4D18BFE64E160AE360B5D1887584D6C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42994B9D87C358B93CB8A5ED2D6D1CDE /* PBXTargetDependency */,
+				0E818AE1A6137364188CEADF315AA5D7 /* PBXTargetDependency */,
+			);
+			name = "Pods-ZLYGlobalTimer_Example";
+			productName = "Pods-ZLYGlobalTimer_Example";
+			productReference = 20C8390876D0FBAEC40533E968DA4C64 /* Pods_ZLYGlobalTimer_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		55EA19B75F4ECEBA742003AD17D63B36 /* Pods-ZLYGlobalTimer_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69BE1275A28427F0CE815169A85B2DC5 /* Build configuration list for PBXNativeTarget "Pods-ZLYGlobalTimer_Tests" */;
+			buildPhases = (
+				32E48F33AA7BBD9560FEDAB2D0BF481F /* Sources */,
+				6A866390A7A90E19461F238B11FB27D6 /* Frameworks */,
+				AEDC32E2FB1D057595E8AB593D624C41 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				815E87650B2A0EB7E88FE1F226E8467C /* PBXTargetDependency */,
+			);
+			name = "Pods-ZLYGlobalTimer_Tests";
+			productName = "Pods-ZLYGlobalTimer_Tests";
+			productReference = E3068BDB1052962B1005DCFA27DD48D8 /* Pods_ZLYGlobalTimer_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88166592969712188C0F5317D1FF1C94 /* ZLYGlobalTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F63C36965C3BF7D1F762CB7067CBF75 /* Build configuration list for PBXNativeTarget "ZLYGlobalTimer" */;
+			buildPhases = (
+				90078974B4C1FCC27E8B386510439120 /* Sources */,
+				F08B178890D4454D969998113A2372B7 /* Frameworks */,
+				1A6895B8762E4D08B04D37D6B3CA9F2D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C08C573BA441482FA2E1DCDF6EA76D /* PBXTargetDependency */,
+			);
+			name = ZLYGlobalTimer;
+			productName = ZLYGlobalTimer;
+			productReference = BED283FDED8722B87BB98B0C62DD4845 /* ZLYGlobalTimer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1359C7B6D92ABF2D3F636AEB294EF4B /* Build configuration list for PBXNativeTarget "MSWeakTimer" */;
+			buildPhases = (
+				95C1FFBD4F169BF7C6E74536F6D8FAC0 /* Sources */,
+				3D6A686A9025B7256B9D18FA27B0807B /* Frameworks */,
+				68654C6078B0AC01AC99EBE8498CA1A8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSWeakTimer;
+			productName = MSWeakTimer;
+			productReference = 37B4DCC9932D99B809B4B9B7E1F4C03E /* MSWeakTimer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4E94505D83A33941056546F3AC99BADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */,
+				4D6AA575A5A1328718F3E4F32A7D4163 /* Pods-ZLYGlobalTimer_Example */,
+				55EA19B75F4ECEBA742003AD17D63B36 /* Pods-ZLYGlobalTimer_Tests */,
+				88166592969712188C0F5317D1FF1C94 /* ZLYGlobalTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18A199B5F41A5B3D6ACA1B685CCDC2DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B14F3512914A966C4D2CD5A3734CE6 /* Pods-ZLYGlobalTimer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E48F33AA7BBD9560FEDAB2D0BF481F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0494703F435A379D8600388591BE470E /* Pods-ZLYGlobalTimer_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90078974B4C1FCC27E8B386510439120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA31045DBC81F21247BF061DFAED13C /* NSTimer+ZLYGTExpansion.m in Sources */,
+				027058B375D697C6371A193A89D9D4A9 /* ZLYGlobalTimer-dummy.m in Sources */,
+				0452C1342F9124A7FE544A876D8354D5 /* ZLYGlobalTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95C1FFBD4F169BF7C6E74536F6D8FAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				823641DF7FF13AE4709C3AB5698AAA95 /* MSWeakTimer-dummy.m in Sources */,
+				A9EFB63E026D5647795587A1A43BF7F8 /* MSWeakTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E818AE1A6137364188CEADF315AA5D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZLYGlobalTimer;
+			target = 88166592969712188C0F5317D1FF1C94 /* ZLYGlobalTimer */;
+			targetProxy = CEDBD9CA8DAAA1921780B356041B6E94 /* PBXContainerItemProxy */;
+		};
+		22C08C573BA441482FA2E1DCDF6EA76D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSWeakTimer;
+			target = AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */;
+			targetProxy = 4FD53F5E8814C42F14E92B1623E0E8A7 /* PBXContainerItemProxy */;
+		};
+		42994B9D87C358B93CB8A5ED2D6D1CDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSWeakTimer;
+			target = AA6E2C489C87B3328DF55E84521F17AD /* MSWeakTimer */;
+			targetProxy = B8D8FADC82671880C2D1E7E381B13194 /* PBXContainerItemProxy */;
+		};
+		815E87650B2A0EB7E88FE1F226E8467C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ZLYGlobalTimer_Example";
+			target = 4D6AA575A5A1328718F3E4F32A7D4163 /* Pods-ZLYGlobalTimer_Example */;
+			targetProxy = 49D64B7D4F03DF4D406129AFCC560DE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1658EFE6D1C6387DB8ECAC5C31D96093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF9BFC239F9D1C015D7F5632316B2E95 /* Pods-ZLYGlobalTimer_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Tests/Pods-ZLYGlobalTimer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		16C372C3B3FD648285B19E7868E30346 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D783C5A92E224263A4FD4715E3B6FA2 /* Pods-ZLYGlobalTimer_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Tests/Pods-ZLYGlobalTimer_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2FDCF0B979CC02ABA6A0A2D45A631401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MSWeakTimer/MSWeakTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSWeakTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSWeakTimer/MSWeakTimer.modulemap";
+				PRODUCT_MODULE_NAME = MSWeakTimer;
+				PRODUCT_NAME = MSWeakTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		363484EF801788B6E52E60853F60F317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7120426630112A97383ED5B9FA95AB16 /* ZLYGlobalTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLYGlobalTimer/ZLYGlobalTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLYGlobalTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZLYGlobalTimer/ZLYGlobalTimer.modulemap";
+				PRODUCT_MODULE_NAME = ZLYGlobalTimer;
+				PRODUCT_NAME = ZLYGlobalTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81DF06A53E2840A2232B75D02D56B584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B1E836DC4F86C6F383B89605D475D6 /* Pods-ZLYGlobalTimer_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Example/Pods-ZLYGlobalTimer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D27DA37DEEE9649806A994ABEFF0F169 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E09609FCF132F94BE6F7937929A727 /* Pods-ZLYGlobalTimer_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZLYGlobalTimer_Example/Pods-ZLYGlobalTimer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DC1433AEEA7B57DD07AF02CC16AF5861 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4B6327EFEDD538FE3DC5B7B1D960AD8 /* MSWeakTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MSWeakTimer/MSWeakTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSWeakTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSWeakTimer/MSWeakTimer.modulemap";
+				PRODUCT_MODULE_NAME = MSWeakTimer;
+				PRODUCT_NAME = MSWeakTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE1CB83586309947F78CFA75A4FD8FC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7120426630112A97383ED5B9FA95AB16 /* ZLYGlobalTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZLYGlobalTimer/ZLYGlobalTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZLYGlobalTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZLYGlobalTimer/ZLYGlobalTimer.modulemap";
+				PRODUCT_MODULE_NAME = ZLYGlobalTimer;
+				PRODUCT_NAME = ZLYGlobalTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69BE1275A28427F0CE815169A85B2DC5 /* Build configuration list for PBXNativeTarget "Pods-ZLYGlobalTimer_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1658EFE6D1C6387DB8ECAC5C31D96093 /* Debug */,
+				16C372C3B3FD648285B19E7868E30346 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7773F9DAB241B3AF9C27E8431E31C282 /* Build configuration list for PBXNativeTarget "Pods-ZLYGlobalTimer_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D27DA37DEEE9649806A994ABEFF0F169 /* Debug */,
+				81DF06A53E2840A2232B75D02D56B584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F63C36965C3BF7D1F762CB7067CBF75 /* Build configuration list for PBXNativeTarget "ZLYGlobalTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				363484EF801788B6E52E60853F60F317 /* Debug */,
+				DE1CB83586309947F78CFA75A4FD8FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1359C7B6D92ABF2D3F636AEB294EF4B /* Build configuration list for PBXNativeTarget "MSWeakTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FDCF0B979CC02ABA6A0A2D45A631401 /* Debug */,
+				DC1433AEEA7B57DD07AF02CC16AF5861 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

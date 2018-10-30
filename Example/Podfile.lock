@@ -1,0 +1,23 @@
+PODS:
+  - MSWeakTimer (1.1.0)
+  - ZLYGlobalTimer (0.1.0):
+    - MSWeakTimer
+
+DEPENDENCIES:
+  - ZLYGlobalTimer (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MSWeakTimer
+
+EXTERNAL SOURCES:
+  ZLYGlobalTimer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
+  ZLYGlobalTimer: 5dc4b5069e1fb03d42d81745dfd69839e08a1964
+
+PODFILE CHECKSUM: 9dfe6d75cc136f99c13036cb725720d0c0ad9005
+
+COCOAPODS: 1.5.3

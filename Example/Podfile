@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZLYGlobalTimer_Example' do
+  pod 'ZLYGlobalTimer', :path => '../'
+
+  target 'ZLYGlobalTimer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

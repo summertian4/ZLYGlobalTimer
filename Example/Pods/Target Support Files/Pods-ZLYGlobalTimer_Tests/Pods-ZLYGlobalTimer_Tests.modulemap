@@ -1,0 +1,6 @@
+framework module Pods_ZLYGlobalTimer_Tests {
+  umbrella header "Pods-ZLYGlobalTimer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

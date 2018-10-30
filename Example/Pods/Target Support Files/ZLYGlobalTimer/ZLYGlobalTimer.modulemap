@@ -1,0 +1,6 @@
+framework module ZLYGlobalTimer {
+  umbrella header "ZLYGlobalTimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
