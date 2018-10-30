@@ -12,6 +12,8 @@
 
 #import "NSTimer+ZLYGTExpansion.h"
 #import "ZLYGlobalTimer.h"
+#import "ZLYTimerEvent.h"
+#import "ZLYWeakTimer.h"
 
 FOUNDATION_EXPORT double ZLYGlobalTimerVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZLYGlobalTimerVersionString[];

@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08940C59D0013A6953F686FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		08940C59D0013A6953F686FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		245F252BAF5BC1E8C406DA90 /* Pods-ZLYGlobalTimer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLYGlobalTimer_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLYGlobalTimer_Example/Pods-ZLYGlobalTimer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2C9FBD7A6904DD47A2376AFD /* Pods-ZLYGlobalTimer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLYGlobalTimer_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLYGlobalTimer_Example/Pods-ZLYGlobalTimer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2CBAAD453A1703E290309917 /* Pods-ZLYGlobalTimer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLYGlobalTimer_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZLYGlobalTimer_Tests/Pods-ZLYGlobalTimer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3D8922E7EDF614D5E21F7EF /* Pods-ZLYGlobalTimer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLYGlobalTimer_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZLYGlobalTimer_Tests/Pods-ZLYGlobalTimer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A6F599A170F2F47268E4DD86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		A8C4B2C8158693D3FAB4977A /* ZLYGlobalTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZLYGlobalTimer.podspec; path = ../ZLYGlobalTimer.podspec; sourceTree = "<group>"; };
+		A6F599A170F2F47268E4DD86 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A8C4B2C8158693D3FAB4977A /* ZLYGlobalTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZLYGlobalTimer.podspec; path = ../ZLYGlobalTimer.podspec; sourceTree = "<group>"; };
 		B653022D3FEEA120BEBD3A46 /* Pods_ZLYGlobalTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLYGlobalTimer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE5A85A79A0EAB0B502E4ED /* Pods_ZLYGlobalTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLYGlobalTimer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -490,6 +490,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLYGlobalTimer/ZLYGlobalTimer-Prefix.pch";
 				INFOPLIST_FILE = "ZLYGlobalTimer/ZLYGlobalTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +506,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZLYGlobalTimer/ZLYGlobalTimer-Prefix.pch";
 				INFOPLIST_FILE = "ZLYGlobalTimer/ZLYGlobalTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

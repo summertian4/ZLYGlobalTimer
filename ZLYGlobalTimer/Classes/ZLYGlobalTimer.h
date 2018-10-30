@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZLYTimerEvent.h"
+#import "ZLYWeakTimer.h"
 
 // You should know these about NSTimer first.
 // This is the official document:
@@ -17,6 +19,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLYGlobalTimer : NSObject
+
++ (instancetype)shareInstance;
+
++ (void)start;
++ (void)end;
+
+- (ZLYWeakTimer *)addEvent:(ZLYTimerEvent *)event;
 
 @end
 

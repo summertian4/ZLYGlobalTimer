@@ -7,12 +7,13 @@
 //
 
 #import "ZLYAppDelegate.h"
+#import <ZLYGlobalTimer/ZLYGlobalTimer.h>
 
 @implementation ZLYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [ZLYGlobalTimer start];
     return YES;
 }
 
