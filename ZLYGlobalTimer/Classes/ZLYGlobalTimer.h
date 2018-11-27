@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (ZLYWeakTimer *)addEvent:(ZLYTimerEvent *)event;
 
+- (NSUInteger)timersCount;
+- (NSUInteger)eventsCount;
+
 @end
 
 NS_ASSUME_NONNULL_END

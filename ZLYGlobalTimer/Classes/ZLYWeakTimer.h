@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZLYWeakTimer : MSWeakTimer
 @property (nonatomic, strong) NSArray<ZLYTimerEvent *> *events;
 @property (nonatomic, assign) long long second;
-- (void)addEvents:(ZLYTimerEvent *)event;
+- (BOOL)addEvent:(ZLYTimerEvent *)event;
 - (void)removeEvents:(ZLYTimerEvent *)event;
 @end
 
