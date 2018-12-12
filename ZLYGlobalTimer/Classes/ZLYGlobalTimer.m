@@ -9,8 +9,6 @@
 #import "ZLYWeakTimer.h"
 
 @interface ZLYGlobalTimer ()
-/** 专门处理 timers events 变动的串行队列 */
-@property (strong, nonatomic) dispatch_queue_t privateQueue;
 @property (nonatomic, strong) NSArray<ZLYWeakTimer *> *timers;
 
 @end
@@ -40,7 +38,6 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.privateQueue = dispatch_queue_create("com.zhoulingyu.ZLYGlobalTimer.privatQueue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -51,56 +48,68 @@
 
 - (NSUInteger)eventsCount {
     __block NSUInteger count = 0;
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            [self.timers enumerateObjectsUsingBlock:^(ZLYWeakTimer * _Nonnull timer, NSUInteger idx, BOOL * _Nonnull stop) {
-                count += timer.events.count;
-            }];
-        }
-    });
+    [[self.timers mutableCopy] enumerateObjectsUsingBlock:^(ZLYWeakTimer * _Nonnull timer, NSUInteger idx, BOOL * _Nonnull stop) {
+        count += timer.events.count;
+    }];
     return count;
 }
 
 - (ZLYWeakTimer *)addEvent:(ZLYTimerEvent *)event {
-    __weak __block __typeof(ZLYWeakTimer *)t = nil;
-    __weak __typeof(ZLYTimerEvent *)weakEvent = event;
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            [self.timers enumerateObjectsUsingBlock:^(ZLYWeakTimer * _Nonnull timer, NSUInteger idx, BOOL * _Nonnull stop) {
-                BOOL result = [timer addEvent:weakEvent];
-                if (result) {   // 有空余，成功加入
+    ZLYWeakTimer *t = nil;
+    @synchronized (self) {
+        for (int i = 0; i < self.timers.count; i++) {
+            ZLYWeakTimer *timer = self.timers[i];
+            BOOL result = [timer addEvent:event];
+            if (result) {   // 有空余，直接加入
+                t = timer;
+                break;
+            } else {    // 没有空余，创建新 timer 加入
+                if (i == self.timers.count - 1) { // 已经是最后一个
+                    ZLYWeakTimer *timer = [[ZLYWeakTimer alloc] init];
+                    [timer addEvent:event];
+                    [self addTimer:timer];
                     t = timer;
-                } else {    // 没有空余，未成功加入
-                    if (idx == strongSelf.timers.count - 1) { // 已经是最后一个
-                        ZLYWeakTimer *timer = [[ZLYWeakTimer alloc] init];
-                        [timer addEvent:weakEvent];
-                        [strongSelf addTimer:timer];
-                        t = timer;
-                    }
+                    break;
                 }
-            }];
+            }
         }
-    });
+    }
+    return t;
+}
+
+- (ZLYWeakTimer *)removeEvent:(ZLYTimerEvent *)event {
+    ZLYWeakTimer *t = nil;
+    @synchronized (self) {
+        for (int i = 0; i < self.timers.count; i++) {
+            ZLYWeakTimer *timer = self.timers[i];
+            BOOL result = [timer addEvent:event];
+            if (result) {   // 有空余，直接加入
+                t = timer;
+                break;
+            } else {    // 没有空余，创建新 timer 加入
+                if (i == self.timers.count - 1) { // 已经是最后一个
+                    ZLYWeakTimer *timer = [[ZLYWeakTimer alloc] init];
+                    [timer addEvent:event];
+                    [self addTimer:timer];
+                    t = timer;
+                    break;
+                }
+            }
+        }
+    }
     return t;
 }
 
 #pragma mark - Life Circle
 
 - (void)dealloc {
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            [strongSelf.timers enumerateObjectsUsingBlock:^(MSWeakTimer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [obj invalidate];
-            }];
-            strongSelf.timers = nil;
-        }
-    });
+    NSLog(@"%@ dealloc", self);
+    @synchronized (self) {
+        [self.timers enumerateObjectsUsingBlock:^(MSWeakTimer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj invalidate];
+        }];
+        self.timers = nil;
+    }
 }
 
 - (void)start {
@@ -109,28 +118,20 @@
 }
 
 - (void)addTimer:(ZLYWeakTimer *)timer {
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            NSMutableArray *mutableTimers = [strongSelf.timers mutableCopy];
-            [mutableTimers addObject:timer];
-            strongSelf.timers = mutableTimers;
-        }
-    });
+    @synchronized (self) {
+        NSMutableArray *mutableTimers = [self.timers mutableCopy];
+        [mutableTimers addObject:timer];
+        self.timers = mutableTimers;
+    }
 }
 
 - (void)end {
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            [strongSelf.timers enumerateObjectsUsingBlock:^(MSWeakTimer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [obj invalidate];
-            }];
-            strongSelf.timers = nil;
-        }
-    });
+    @synchronized (self) {
+        [self.timers enumerateObjectsUsingBlock:^(MSWeakTimer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj invalidate];
+        }];
+        self.timers = nil;
+    }
 }
 
 #pragma mark - Getter Setter
@@ -141,5 +142,4 @@
     }
     return _timers;
 }
-
 @end

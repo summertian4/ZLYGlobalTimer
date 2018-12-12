@@ -9,9 +9,6 @@
 #import "ZLYTimerEvent.h"
 
 @interface ZLYWeakTimer ()
-
-/** 专门处理 timers events 变动的串行队列 */
-@property (strong, nonatomic) dispatch_queue_t privateQueue;
 @end
 
 @implementation ZLYWeakTimer
@@ -23,7 +20,6 @@
                                   userInfo:nil
                                    repeats:YES
                              dispatchQueue:dispatch_get_main_queue()]) {
-        self.privateQueue = dispatch_queue_create("com.zhoulingyu.ZLYGlobalTimer.privatQueue", DISPATCH_QUEUE_SERIAL);
         [self schedule];
     }
     return self;
@@ -32,34 +28,31 @@
 #pragma mark - Public
 
 - (BOOL)addEvent:(ZLYTimerEvent *)event {
-    __weak __typeof(self)weakSelf = self;
-    __block BOOL result = NO;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            if (strongSelf.events.count < MaxEventsCount) { // 有空余超过容量，允许加入
-                NSMutableArray *mutableEvents = [self.events mutableCopy];
-                [mutableEvents addObject:event];
-                strongSelf.events = mutableEvents;
-                result = YES;
-            } else { // 没有空余
-                result = NO;
-            }
+    BOOL result = NO;
+    @synchronized (self) {
+        if (self.events.count < MaxEventsCount) { // 有空余超过容量，允许加入
+            NSMutableArray *mutableEvents = [self.events mutableCopy];
+            [mutableEvents addObject:event];
+            self.events = mutableEvents;
+            result = YES;
+        } else { // 没有空余
+            result = NO;
         }
-    });
+    }
     return result;
 }
 
-- (void)removeEvents:(ZLYTimerEvent *)event {
-    __weak __typeof(self)weakSelf = self;
-    dispatch_sync(self.privateQueue, ^{
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (strongSelf) {
-            NSMutableArray *mutableEvents = [strongSelf.events mutableCopy];
+- (instancetype)removeEvents:(ZLYTimerEvent *)event {
+    @synchronized (self) {
+        NSMutableArray *mutableEvents = [self.events mutableCopy];
+        if ([mutableEvents containsObject:event]) {
             [mutableEvents removeObject:event];
-            strongSelf.events = mutableEvents;
+            self.events = mutableEvents;
+            return self;
+        } else {
+            return nil;
         }
-    });
+    }
 }
 
 #pragma mark - Private
@@ -91,5 +84,4 @@
     }
     return _events;
 }
-
 @end

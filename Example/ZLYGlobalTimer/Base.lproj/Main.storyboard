@@ -118,6 +118,21 @@
                                     <action selector="stopButtonClicked:" destination="whP-gf-Uak" eventType="touchUpInside" id="uPd-qQ-q73"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z80-8l-epM">
+                                <rect key="frame" x="137.5" y="449" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.80784313730000001" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="E6r-ae-j0c"/>
+                                    <constraint firstAttribute="height" constant="40" id="QW9-RV-ZcU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="执行测试">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTest:" destination="whP-gf-Uak" eventType="touchUpInside" id="bJc-MO-0ic"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -131,12 +146,14 @@
                             <constraint firstItem="jcM-Ik-S1Z" firstAttribute="top" secondItem="sVW-RP-nkB" secondAttribute="bottom" constant="30" id="JqK-es-DX8"/>
                             <constraint firstItem="gEY-qk-Nbp" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="OoC-AB-G5S"/>
                             <constraint firstItem="rFQ-9S-4Mx" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Ozz-Ul-hke"/>
+                            <constraint firstItem="Z80-8l-epM" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="Uv5-ha-4bU"/>
                             <constraint firstItem="sVW-RP-nkB" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="Vez-rg-3EL"/>
                             <constraint firstItem="jcM-Ik-S1Z" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" constant="-40" id="fDe-S7-z5b"/>
                             <constraint firstAttribute="trailing" secondItem="gEY-qk-Nbp" secondAttribute="trailing" id="fqj-mU-Hcg"/>
                             <constraint firstItem="twB-jm-BNP" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="heL-8E-VEi"/>
                             <constraint firstItem="uWF-uY-UCe" firstAttribute="top" secondItem="jcM-Ik-S1Z" secondAttribute="top" id="jQQ-fv-qOU"/>
                             <constraint firstItem="twB-jm-BNP" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="kpE-6W-3Xc"/>
+                            <constraint firstItem="Z80-8l-epM" firstAttribute="top" secondItem="jcM-Ik-S1Z" secondAttribute="bottom" constant="37.5" id="smy-6Q-FEB"/>
                             <constraint firstItem="Xt9-5d-o4e" firstAttribute="top" secondItem="twB-jm-BNP" secondAttribute="bottom" id="tMB-ut-nu8"/>
                             <constraint firstItem="uWF-uY-UCe" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" constant="40" id="yEm-H4-gOa"/>
                         </constraints>
