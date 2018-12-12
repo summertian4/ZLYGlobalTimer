@@ -54,50 +54,37 @@
     return count;
 }
 
-- (ZLYWeakTimer *)addEvent:(ZLYTimerEvent *)event {
-    ZLYWeakTimer *t = nil;
+- (void)addEvent:(ZLYTimerEvent *)event {
     @synchronized (self) {
         for (int i = 0; i < self.timers.count; i++) {
             ZLYWeakTimer *timer = self.timers[i];
             BOOL result = [timer addEvent:event];
             if (result) {   // 有空余，直接加入
-                t = timer;
                 break;
             } else {    // 没有空余，创建新 timer 加入
                 if (i == self.timers.count - 1) { // 已经是最后一个
                     ZLYWeakTimer *timer = [[ZLYWeakTimer alloc] init];
                     [timer addEvent:event];
                     [self addTimer:timer];
-                    t = timer;
                     break;
                 }
             }
         }
     }
-    return t;
 }
 
-- (ZLYWeakTimer *)removeEvent:(ZLYTimerEvent *)event {
-    ZLYWeakTimer *t = nil;
+- (BOOL)removeEvent:(ZLYTimerEvent *)event {
     @synchronized (self) {
+        BOOL result = NO;
         for (int i = 0; i < self.timers.count; i++) {
             ZLYWeakTimer *timer = self.timers[i];
-            BOOL result = [timer addEvent:event];
-            if (result) {   // 有空余，直接加入
-                t = timer;
+            if ([timer removeEvents:event]) {
+                result = YES;
                 break;
-            } else {    // 没有空余，创建新 timer 加入
-                if (i == self.timers.count - 1) { // 已经是最后一个
-                    ZLYWeakTimer *timer = [[ZLYWeakTimer alloc] init];
-                    [timer addEvent:event];
-                    [self addTimer:timer];
-                    t = timer;
-                    break;
-                }
             }
         }
+        return result;
     }
-    return t;
 }
 
 #pragma mark - Life Circle

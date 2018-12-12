@@ -3,7 +3,7 @@
 //  Pods-ZLYGlobalTiimer_Example
 //
 //  Created by 周凌宇 on 2018/10/29.
-//
+// ZLYGlobalTimer is not based on NSTimer, but provides this category to help developers avoid circular references when using NSTimer
 
 #import <Foundation/Foundation.h>
 

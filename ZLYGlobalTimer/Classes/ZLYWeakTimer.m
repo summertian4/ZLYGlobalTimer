@@ -42,15 +42,15 @@
     return result;
 }
 
-- (instancetype)removeEvents:(ZLYTimerEvent *)event {
+- (BOOL)removeEvents:(ZLYTimerEvent *)event {
     @synchronized (self) {
         NSMutableArray *mutableEvents = [self.events mutableCopy];
         if ([mutableEvents containsObject:event]) {
             [mutableEvents removeObject:event];
             self.events = mutableEvents;
-            return self;
+            return YES;
         } else {
-            return nil;
+            return NO;
         }
     }
 }
